@@ -2,13 +2,20 @@
   "name": "khai-node-js-course",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "scr/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node --watch scr/index.js",
+    "migration:generate": "drizzle-kit generate:pg",
+    "migration:push": "drizzle-kit push:pg"
   },
-  "author": "",
+  "author": "Viktoriia Hlushchenko",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "body-parser": "^1.20.2",
+    "drizzle-kit": "^0.20.17",
+    "drizzle-orm": "^0.30.10",
+    "express": "^4.8.2",
+    "pg": "^8.11.5"
   }
 }
